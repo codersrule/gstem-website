@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import 'antd/dist/reset.css';
-
 import AppHeader from './components/common/header';
 import AppFooter from './components/common/footer';
 import AppHome from './views/home';

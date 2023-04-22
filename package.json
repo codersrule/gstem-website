@@ -2,7 +2,7 @@
   "name": "gstem-website",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://uapb.gstem.edu",
+  "homepage":"https://codersrule.github.io/gstem-website",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "antd": "^5.4.2",
