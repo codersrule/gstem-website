@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/gstem-website/static/css/main.58e4532f.css",
+    "main.js": "/gstem-website/static/js/main.c240fc89.js",
+    "static/media/easy-customise.jpg": "/gstem-website/static/media/easy-customise.d4fe22138e1668906aab.jpg",
+    "static/media/great-support.jpg": "/gstem-website/static/media/great-support.13341f4e93333e45ebbe.jpg",
+    "static/media/advanced-option.jpg": "/gstem-website/static/media/advanced-option.84c7d0693123632c9035.jpg",
+    "static/media/modern-design.jpg": "/gstem-website/static/media/modern-design.e2114f5b8abbe8b1fa8b.jpg",
+    "static/media/clean-design.jpg": "/gstem-website/static/media/clean-design.728069dab437b67d9da8.jpg",
+    "static/media/unlimited-features.jpg": "/gstem-website/static/media/unlimited-features.a0b8acf77e6b57772078.jpg",
+    "index.html": "/gstem-website/index.html",
+    "main.58e4532f.css.map": "/gstem-website/static/css/main.58e4532f.css.map",
+    "main.c240fc89.js.map": "/gstem-website/static/js/main.c240fc89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58e4532f.css",
+    "static/js/main.c240fc89.js"
+  ]
+}
