@@ -20,7 +20,7 @@ function AppHeader() {
       <div className="header">
         <div className="logo">
           <i className="fas fa-bolt"></i>
-          <a href="http://uapb.edu">GSTEM</a>
+          <a href="">GSTEM</a>
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">
@@ -28,7 +28,7 @@ function AppHeader() {
             <Link href="#about" title="About" />
             <Link href="#feature" title="Recent Event" />
             <Link href="#faq" title="FAQ" />
-            <Link href="#donate" title="Donate" />
+            <Link target='_blank' href="https://uapb.tfaforms.net/31" title="Donate" />
             <Link href="#contact" title="Contact" />
           </Anchor>
         </div>
@@ -46,7 +46,7 @@ function AppHeader() {
               <Link href="#about" title="About" />
               <Link href="#feature" title="Recent Event" />
               <Link href="#faq" title="FAQ" />
-              <Link href="#donate" title="Donate" />
+              <Link target='_blank' href="https://uapb.tfaforms.net/31" title="Donate" />
               <Link href="#contact" title="Contact" />
             </Anchor>
           </Drawer>

@@ -8,8 +8,6 @@ import image5 from '../../assets/images/unlimited-features.jpg';
 import image6 from '../../assets/images/advanced-option.jpg';
 
 import { Row, Col, Card } from 'antd';
-import { Button, Modal } from 'antd';
-const { Meta } = Card;
 
 class RecentEvent extends React.Component {
   state = { visible: false };
@@ -27,7 +25,6 @@ class RecentEvent extends React.Component {
     });
   };
 
-
   render(){
     return(
 <div id="feature" className="block featureBlock bgGray">
@@ -39,7 +36,7 @@ class RecentEvent extends React.Component {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Modern Design" src={image1} />}
+              cover={<img alt="Event" src={image1} />}
             >
              
             </Card>
@@ -47,7 +44,7 @@ class RecentEvent extends React.Component {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image2} />}
+              cover={<img alt="Event" src={image2} />}
             >
              
             </Card>
@@ -55,7 +52,7 @@ class RecentEvent extends React.Component {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image3} />}
+              cover={<img alt="Event" src={image3} />}
             >
               
             </Card>
@@ -63,7 +60,7 @@ class RecentEvent extends React.Component {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image4} />}
+              cover={<img alt="Event" src={image4} />}
             >
               
             </Card>
@@ -71,7 +68,7 @@ class RecentEvent extends React.Component {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image5} />}
+              cover={<img alt="Event" src={image5} />}
             >
               
             </Card>
@@ -79,21 +76,13 @@ class RecentEvent extends React.Component {
           <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
             <Card
               hoverable
-              cover={<img alt="Test" src={image6} />}
+              cover={<img alt="Event" src={image6} />}
             >
             </Card>
+          </Col>
+          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
           </Col>
         </Row>
-           {
-            /**
-             * <div className="quickSupport">
-          <br />
-          <h3>Follow the link for Events?</h3>
-          <Button type="primary" size="large"><i className="fas fa-envelope"></i> Events and News</Button>
-        </div>
-             */
-           }
-        
       </div>
     </div>
     )

@@ -1,5 +1,4 @@
 import React from 'react';
-import { PlayCircleOutlined } from '@ant-design/icons';
 import { Button, Modal } from 'antd';
 
 class AppWorks extends React.Component {
@@ -12,7 +11,6 @@ class AppWorks extends React.Component {
   };
 
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -23,7 +21,7 @@ class AppWorks extends React.Component {
       <div id="works" className="block worksBlock">
         <div className="container-fluid">
           <div className="contentHolder">
-            <Button shape='circle' icon = {<PlayCircleOutlined />} onClick={this.showModal}></Button>
+            <Button shape='circle' onClick={this.showModal}></Button>
           </div>
           <Modal
             visible={this.state.visible}
@@ -31,7 +29,7 @@ class AppWorks extends React.Component {
             footer={null}
             destroyOnClose = {true}
           >
-            <iframe title='youtube' width="350" height="350" src="https://www.youtube.com/embed/8f8_JYIzOno?list=PLiUrl-SQRR7LQINGQGE99pXWDuKq4SxfU"></iframe>
+            <iframe width="360" height="315" src="https://www.youtube.com/embed/Joz6Jlpu93U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </Modal>
         </div>
       </div>

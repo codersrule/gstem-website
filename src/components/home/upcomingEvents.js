@@ -5,22 +5,14 @@ import { Row, Col } from 'antd';
 const items = [
   {
     key: '1',
-    icon: <i className="fas fa-chart-pie"></i>,
-    title: 'Announcement 1',
-    content: "",
+    title: 'Announcements',
+    content: "No current announcement",
   },
   {
     key: '2',
-    icon: <i className="fas fa-desktop"></i>,
-    title: 'Announcement 2',
+    title: 'Upcoming Events',
     content:"No upcoming events.",
-  },
-  {
-    key: '3',
-    icon: <i className="fas fa-database"></i>,
-    title: 'Announcement 3',
-    content:"",
-  },
+  }
 ]
 
 function UpcomingEvents() {
@@ -28,9 +20,9 @@ function UpcomingEvents() {
     <div id="about" className="block aboutBlock">
       <div className="container-fluid">
         <div className="titleHolder">
-          <h2>Upcoming Events</h2>
+          <h2> NEWS </h2>
         </div>
-        <Row gutter={[16, 16]}>   
+        <Row gutter={[]}>   
           {items.map(item => {
             return (
               <Col md={{ span: 8 }} key={item.key}>
