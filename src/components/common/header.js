@@ -1,59 +1,95 @@
-import React, { useState } from 'react';
-
-import { Anchor, Drawer, Button } from 'antd';
-
+import React from 'react';
+import { Anchor, Drawer, Button, Modal, Row} from 'antd';
+import { BarsOutlined } from '@ant-design/icons';
+import Application from '../home/application';
 const { Link } = Anchor;
 
-function AppHeader() {
-  const [visible, setVisible] = useState(false);
+class AppHeader extends React.Component {
+  state = { visible: false, showApplicationModal: false  };
 
-  const showDrawer = () => {
-    setVisible(true);
+  showModal = () => {
+    this.setState({
+      showApplicationModal: true,
+    });
   };
 
-  const onClose = () => {
-    setVisible(false);
+  handleCancel = e => {
+    this.setState({
+      showApplicationModal: false,
+    });
   };
 
-  return (
-    <div className="container-fluid">
-      <div className="header">
-        <div className="logo">
-          <i className="fas fa-bolt"></i>
-          <a href="">GSTEM</a>
-        </div>
-        <div className="mobileHidden">
-          <Anchor targetOffset="65">
-            <Link href="#hero" title="Home" />
-            <Link href="#about" title="About" />
-            <Link href="#feature" title="Recent Event" />
-            <Link href="#faq" title="FAQ" />
-            <Link target='_blank' href="https://uapb.tfaforms.net/31" title="Donate" />
-            <Link href="#contact" title="Contact" />
-          </Anchor>
-        </div>
-        <div className="mobileVisible">
-          <Button type="primary" onClick={showDrawer}>
-            <i className="fas fa-bars"></i>
-          </Button>
-          <Drawer
-            placement="right"
-            closable={false}
-            onClose={onClose}
-          >
-            <Anchor targetOffset="65">
-              <Link href="#hero" title="Home" />
-              <Link href="#about" title="About" />
+
+ showDrawer = () => {
+  this.setState({
+    visible: true
+  })
+  };
+
+ onClose = () => {
+    this.setState({
+      visible:false
+    })
+  };
+
+  render() {
+
+    return (
+      <>
+      <div className="container-fluid">
+        <div className="header">
+          <div className="logo">
+            <a href="/">GSTEM</a>
+          </div>
+          <div className="mobileHidden">
+            <Row>
+            <Button type='link' onClick = {this.showModal} >Apply</Button>
+            <Anchor>
+              <Link href="#about" title="About" />              
               <Link href="#feature" title="Recent Event" />
               <Link href="#faq" title="FAQ" />
               <Link target='_blank' href="https://uapb.tfaforms.net/31" title="Donate" />
               <Link href="#contact" title="Contact" />
             </Anchor>
-          </Drawer>
+            </Row>
+          </div>
+  
+          <Modal
+            open={this.state.showApplicationModal}
+            onCancel={this.handleCancel}
+            footer={null}
+            destroyOnClose = {true}
+          >
+          <Application />
+          </Modal>
+  
+          <div className="mobileVisible">
+            <Button type="primary" onClick={this.showDrawer}>
+            <BarsOutlined />
+            </Button>
+            <Drawer
+              placement="right"
+              closable={true}
+              onClose={this.onClose}
+              open = {this.state.visible}
+            >
+              <Anchor>
+                <Button type='link' onClick = {this.showModal} > Apply </Button>
+                <Link href="#about" title="About" />
+                <Link href="#feature" title="Recent Event" />
+                <Link href="#faq" title="FAQ" />
+                <Link target='_blank' href="https://uapb.tfaforms.net/31" title="Donate" />
+                <Link href="#contact" title="Contact" />
+              </Anchor>
+            </Drawer>
+          </div>
         </div>
       </div>
-    </div>
-  );
+      </>
+      
+    );
+
+  }   
 }
 
 export default AppHeader;

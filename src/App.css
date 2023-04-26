@@ -148,7 +148,7 @@ header
 
 .header .ant-menu li.ant-menu-item {
   position: relative;
-  color: #333;
+  color: #050505;
 }
 
 .header .ant-menu li.ant-menu-item:before,
@@ -196,55 +196,11 @@ header
 hero
 ---- 
 */
-.heroBlock {
-  background: url('assets/images/ri-slide1[3]-full.jpg') no-repeat;
-  background-position: 50% 100%;
-  background-size: cover;
-  height: 80vh;
-}
-
-.heroBlock .container-fluid {
-  display: block !important;
-}
-
-.heroBlock .ant-carousel,
-.heroBlock .ant-carousel div {
+.heroBlock img{
+  width: 100%;
   height: 100%;
-}
-
-.heroBlock .slick-dots li button {
-  background: #000 !important;
-}
-
-.heroBlock .slick-dots li.slick-active button {
-  background: #1890ff !important;
-}
-
-.heroBlock .content {
-  max-width: 640px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 0 70px;
-}
-
-.heroBlock h3 {
-  font-size: 30px;
-  line-height: 1.2;
-  margin: 0 0 30px;
-}
-
-.heroBlock p {
-  margin: 0 0 30px;
-}
-
-.heroBlock .btnHolder {
-  height: auto !important;
-}
-
-.heroBlock .btnHolder button,
-.heroBlock .btnHolder .fas {
-  margin: 0 10px 0 0;
+  object-fit: contain;
+  margin-top: 65px;
 }
 
 /* 
@@ -410,15 +366,11 @@ responsive
 ----------
 */
 @media only screen and (max-width: 991px) {
-  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
-    transform: scale(1.14);
-  }
+  
 }
 
 @media only screen and (max-width: 767px) {
-  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
-    transform: scale(1);
-  }
+  
 
   .mobileVisible {
     display: block;

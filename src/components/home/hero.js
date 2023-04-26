@@ -1,9 +1,14 @@
 import React from 'react';
-
+import Pic from '../../assets/images/ri-slide1[3]-full.jpg'
+ 
 function AppHero() {
   return (
-    <div id="hero" className="heroBlock">
-    </div>
+    <div>
+      <div id="hero" className="heroBlock">
+        <img src={Pic} alt="" />
+      </div>
+    </div>  
+    
   );
 }
 

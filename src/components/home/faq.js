@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Collapse, Button } from 'antd';
+import { Collapse } from 'antd';
 
 const { Panel } = Collapse;
 
@@ -17,16 +17,12 @@ function AppFaq() {
           </Panel>
           <Panel header="What are the requirements to apply?" key="2">
             <p>High school graduates with a GPA of 3.0 or higher and composite ACT score of 19 or higher are 
-                eligible to apply. The original schools are: Altheimer-Sherrill High School; Dollarway High 
-                School; Dumas High School; Star City High School; Pine Bluff High School; Watson Chapel 
-                High School; and White Hall High School. Today, eligible high school graduates from other 
-                schools may apply.</p>
+                eligible to apply.</p>
           </Panel>
           <Panel header="Do participants get financial support?" key="3">
             <p>Yes.</p>
           </Panel>
-        </Collapse>
-        
+        </Collapse>     
       </div>
     </div>  
   );

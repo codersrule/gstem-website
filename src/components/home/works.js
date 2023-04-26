@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal } from 'antd';
 
+
 class AppWorks extends React.Component {
   state = { visible: false };
 
@@ -21,10 +22,12 @@ class AppWorks extends React.Component {
       <div id="works" className="block worksBlock">
         <div className="container-fluid">
           <div className="contentHolder">
-            <Button shape='circle' onClick={this.showModal}></Button>
+            <Button shape='circle' onClick={this.showModal}>
+             
+            </Button>
           </div>
           <Modal
-            visible={this.state.visible}
+            open={this.state.visible}
             onCancel={this.handleCancel}
             footer={null}
             destroyOnClose = {true}
