@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gstem-website/static/css/main.7b2b22ac.css",
-    "main.js": "/gstem-website/static/js/main.2f6df9b5.js",
+    "main.css": "/gstem-website/static/css/main.80940f23.css",
+    "main.js": "/gstem-website/static/js/main.39907171.js",
     "static/media/ri-slide1[3]-full.jpg": "/gstem-website/static/media/ri-slide1[3]-full.a0486f3ab7fd3b1d3588.jpg",
     "static/media/easy-customise.jpg": "/gstem-website/static/media/easy-customise.d4fe22138e1668906aab.jpg",
     "static/media/great-support.jpg": "/gstem-website/static/media/great-support.13341f4e93333e45ebbe.jpg",
@@ -11,11 +11,11 @@
     "static/media/unlimited-features.jpg": "/gstem-website/static/media/unlimited-features.a0b8acf77e6b57772078.jpg",
     "static/media/campus-photo-3.jpg": "/gstem-website/static/media/campus-photo-3.74d2179b59ecec50910b.jpg",
     "index.html": "/gstem-website/index.html",
-    "main.7b2b22ac.css.map": "/gstem-website/static/css/main.7b2b22ac.css.map",
-    "main.2f6df9b5.js.map": "/gstem-website/static/js/main.2f6df9b5.js.map"
+    "main.80940f23.css.map": "/gstem-website/static/css/main.80940f23.css.map",
+    "main.39907171.js.map": "/gstem-website/static/js/main.39907171.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b2b22ac.css",
-    "static/js/main.2f6df9b5.js"
+    "static/css/main.80940f23.css",
+    "static/js/main.39907171.js"
   ]
 }
