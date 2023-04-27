@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Form, Input, Radio, Select } from 'antd';
+import { Button, Form, Input, Radio} from 'antd';
 
 const layout = {
   labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
+  wrApplicationerCol: { span: 16 },
 };
 
 /* eslint-disable no-template-curly-in-string */
@@ -23,7 +23,7 @@ const onFinish = (values) => {
   console.log(values);
 };
 
-const App = () => (
+const Application = () => (
   <Form
     {...layout}
     name="nest-messages"
@@ -31,13 +31,15 @@ const App = () => (
     style={{ maxWidth: 600 }}
     validateMessages={validateMessages}
   >
-    <Form.Item name={['user', 'name']} label="First Name" rules={[{ required: true }]}>
+    <br />
+    <br />
+    <Form.Item name={['user', 'Fname']} label="First Name" rules={[{ required: true }]}>
       <Input />
     </Form.Item>
-    <Form.Item name={['user', 'name']} label="Middle Name" rules={[{ type: 'name'}]}>
+    <Form.Item name={['user', 'Mname']} label="Middle Name" rules={[{ type: 'name'}]}>
       <Input />
     </Form.Item>
-    <Form.Item name={['user', 'name']} label="First Name" rules={[{ required: true }]}>
+    <Form.Item name={['user', 'Lname']} label="Last Name" rules={[{ required: true }]}>
       <Input />
     </Form.Item>
     <Form.Item name={['user', 'email']} label="UAPB Email" rules={[{ type: 'email' }]}>
@@ -49,7 +51,9 @@ const App = () => (
             <Radio value="female"> F </Radio>
           </Radio.Group>
         </Form.Item>
-        <Form.Item label="Classification">
+        {/**
+         * 
+         * <Form.Item label="Classification">
           <Select>
             <Select.Option value="demo">Freshman</Select.Option>
             <Select.Option value="demo">Sophomore</Select.Option>
@@ -57,10 +61,12 @@ const App = () => (
             <Select.Option value="demo">Senior</Select.Option>
           </Select>
         </Form.Item>
-    <Form.Item name={['user', 'introduction']} label="Brief Introduction">
+         */}
+        
+    <Form.Item name={['user', 'introduction']} label="Brief Introduction" >
       <Input.TextArea />
     </Form.Item>
-    <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
+    <Form.Item wrApplicationerCol={{ ...layout.wrApplicationerCol, offset: 8 }}>
       <Button type="primary" htmlType="submit">
         Submit
       </Button>
@@ -68,4 +74,4 @@ const App = () => (
   </Form>
 );
 
-export default App;
+export default Application;
