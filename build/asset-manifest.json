@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gstem-website/static/css/main.80940f23.css",
-    "main.js": "/gstem-website/static/js/main.f6be7b75.js",
+    "main.js": "/gstem-website/static/js/main.8dbb44af.js",
     "static/media/ri-slide1[3]-full.jpg": "/gstem-website/static/media/ri-slide1[3]-full.a0486f3ab7fd3b1d3588.jpg",
     "static/media/easy-customise.jpg": "/gstem-website/static/media/easy-customise.d4fe22138e1668906aab.jpg",
     "static/media/great-support.jpg": "/gstem-website/static/media/great-support.13341f4e93333e45ebbe.jpg",
@@ -12,10 +12,10 @@
     "static/media/campus-photo-3.jpg": "/gstem-website/static/media/campus-photo-3.74d2179b59ecec50910b.jpg",
     "index.html": "/gstem-website/index.html",
     "main.80940f23.css.map": "/gstem-website/static/css/main.80940f23.css.map",
-    "main.f6be7b75.js.map": "/gstem-website/static/js/main.f6be7b75.js.map"
+    "main.8dbb44af.js.map": "/gstem-website/static/js/main.8dbb44af.js.map"
   },
   "entrypoints": [
     "static/css/main.80940f23.css",
-    "static/js/main.f6be7b75.js"
+    "static/js/main.8dbb44af.js"
   ]
 }

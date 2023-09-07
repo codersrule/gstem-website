@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, Drawer, Anchor, Row, Form, Input, Select } from 'antd';
+import { Modal, Button, Drawer, Anchor, Row, Form, Input, Select, message } from 'antd';
 import { BarsOutlined } from '@ant-design/icons';
 const {Link} = Anchor;
 const { Option } = Select;
@@ -31,7 +31,7 @@ const tailFormItemLayout = {
 const AppHeader = () => {
     const [visible, setVisible] = useState(false);
     const [open, setOpen] = useState(false);
-    const [confirmLoading, setConfirmLoading] = useState(false);
+    
     const [formValues, setFormValues] = useState({
         firstName: '',
         middleName:'',
@@ -58,6 +58,7 @@ const AppHeader = () => {
         setTimeout(() => {
             setOpen(false);
           }, 1000);
+          message.success("Success !!!")
     };
 
  
@@ -119,7 +120,7 @@ const AppHeader = () => {
           <Modal
             open={open}
            destroyOnClose = {true}
-            confirmLoading={confirmLoading}
+            
             onCancel={handleCancel}
             footer={null}
             
