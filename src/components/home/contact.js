@@ -1,19 +1,35 @@
 import React from 'react';
 
-import { Form, Input, Button, Select, message } from 'antd';
-
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
+import { Form, Input, Button, Select, message, Space } from 'antd';
 
 const { Option } = Select;
 
-const AppContact = () =>{
+const SubmitButton = ({ form }) => {
+  const [submittable, setSubmittable] = React.useState(false);
+
+  // Watch all values
+  const values = Form.useWatch([], form);
+
+  React.useEffect(() => {
+    form.validateFields({ validateOnly: true }).then(
+      () => {
+        setSubmittable(true);
+      },
+      () => {
+        setSubmittable(false);
+      },
+    );
+  }, [values]);
+
+  return (
+    <Button type="primary" htmlType="submit" disabled={!submittable}>
+      Submit
+    </Button>
+  );
+};
+
+
+const AppContact = () => {
 
   const validateMessages = {
     required: true,
@@ -22,8 +38,10 @@ const AppContact = () =>{
   const onFinish = (values) => {
     console.log(values);
     message.success("Success !!!");
-   
+
   };
+
+  const [form] = Form.useForm();
 
   return (
     <div id="contact" className="block contactBlock">
@@ -31,16 +49,14 @@ const AppContact = () =>{
         <div className="titleHolder">
           <h2>Reach Out To An Advisor</h2>
         </div>
-
         <Form
-          {...layout}
-          name="nest-messages"
+          form={form}
+          name="contact-us"
+          layout="vertical"
+          autoComplete="off"
           onFinish={onFinish}
-          style={{
-            maxWidth: 600,
-          }}
-          validateMessages={validateMessages}
-        >
+          >
+
           <Form.Item
             name='name'
             label="Name"
@@ -53,6 +69,7 @@ const AppContact = () =>{
           >
             <Input />
           </Form.Item>
+
           <Form.Item
             name='email'
             label="Email"
@@ -60,11 +77,11 @@ const AppContact = () =>{
               {
                 type: 'email',
                 message: 'The input is not valid E-mail!',
-            },
-            {
+              },
+              {
                 required: true,
                 message: 'Please input your E-mail!',
-            },
+              },
             ]}
           >
             <Input />
@@ -81,26 +98,22 @@ const AppContact = () =>{
               <Option value="cc">Dr. Charles Colen(Industrial Technology)</Option>
             </Select>
           </Form.Item>
-          <Form.Item 
-          name="subject" 
-          label="Subject"
-          rules={[{ required: true, message: 'Please add a subject' }]}>
+          <Form.Item
+            name="subject"
+            label="Subject"
+            rules={[{ required: true, message: 'Please add a subject' }]}>
             <Input />
           </Form.Item>
-          <Form.Item name="message" 
-          rules={[{ required: true, message: 'Please enter a message' }]}
-          label="Message">
+          <Form.Item name="message"
+            rules={[{ required: true, message: 'Please enter a message' }]}
+            label="Message">
             <Input.TextArea />
           </Form.Item>
-          <Form.Item
-            wrapperCol={{
-              ...layout.wrapperCol,
-              offset: 8,
-            }}
-          >
-            <Button type="primary" htmlType="submit">
-              Submit
-            </Button>
+          <Form.Item >
+            <Space>
+              <SubmitButton form={form} />
+              <Button htmlType="reset">Reset</Button>
+            </Space>
           </Form.Item>
         </Form>
       </div>
