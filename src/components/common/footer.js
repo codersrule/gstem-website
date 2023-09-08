@@ -1,4 +1,5 @@
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css';
 
 import { BackTop } from 'antd';
 
@@ -6,21 +7,16 @@ function AppFooter() {
   return (
     <div className="container-fluid">
       <div className="footer">
-        <div className="logo">
-          <i className="fas fa-bolt"></i>
-          <a href="#">Footer Info</a>
-        </div>
+        <p>Reach out to us</p>
         <ul className="socials">
-          <li><a href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.twitter.com/"><i className="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/"><i className="fab fa-linkedin-in"></i></a></li>
-          <li><a href="https://www.pinterest.com/"><i className="fab fa-pinterest-p"></i></a></li>
-          <li><a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i className="fa fa-facebook-f"></i></a></li>
+          <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
+          <li><a href="#"><i className="fa fa-instagram"></i></a></li>
         </ul>
         <div className="copyright">Copyright &copy; UAPB GSTEM</div>
-        <BackTop>
-          <div className="goTop"><i className="fas fa-arrow-circle-up"></i></div>
-        </BackTop>
+       
       </div>
     </div>
   );

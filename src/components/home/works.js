@@ -19,6 +19,8 @@ class AppWorks extends React.Component {
 
   render() {
     return (
+      <>
+      
       <div id="works" className="block worksBlock">
         <div className="container-fluid">
           <div className="contentHolder">
@@ -36,6 +38,13 @@ class AppWorks extends React.Component {
           </Modal>
         </div>
       </div>
+      <div>
+      <video width="320" height="240" controls>
+        <source src="https://www.youtube.com/embed/Joz6Jlpu93U" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    </>
     );
   }
 }

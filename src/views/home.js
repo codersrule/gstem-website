@@ -3,7 +3,6 @@ import AppHero from '../components/home/hero';
 import UpcomingEvents from '../components/home/upcomingEvents';
 import AppAbout from '../components/home/about';
 import RecentEvent from '../components/home/recentEvents';
-import AppWorks from '../components/home/works';
 import AppFaq from '../components/home/faq';
 import AppContact from '../components/home/contact';
 
@@ -14,7 +13,6 @@ function AppHome() {
       <AppAbout/>
       <UpcomingEvents/>
       <RecentEvent/>
-      <AppWorks/>
       <AppFaq/>
       <AppContact/>
     </div>

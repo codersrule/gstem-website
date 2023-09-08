@@ -7,7 +7,7 @@ import image4 from '../../assets/images/easy-customise.jpg';
 import image5 from '../../assets/images/unlimited-features.jpg';
 import image6 from '../../assets/images/advanced-option.jpg';
 
-import { Row, Col, Card } from 'antd';
+import { Row, Image, Col, Space} from 'antd';
 
 class RecentEvent extends React.Component {
   state = { visible: false };
@@ -25,66 +25,31 @@ class RecentEvent extends React.Component {
     });
   };
 
-  render(){
-    return(
-<div id="feature" className="block featureBlock bgGray">
-      <div className="container-fluid">
-        <div className="titleHolder">
-          <h2>Recent Event</h2>
+  imageUrls = [
+    image1, image2, image3, image4, image5, image6
+    
+  ];
+
+  render() {
+    return (
+      <div id="feature" className="block featureBlock bgGray">
+        <div className="container-fluid">
+          <div className="titleHolder">
+            <h2>Recent Event</h2>
+          </div>
+          <Space wrap>
+              {this.imageUrls.map((imageUrl, index) => (
+                <Image
+                width={250}
+                key={index}
+                src={imageUrl}
+                className="responsive-image"
+                />
+              ))}
+             
+          </Space>
         </div>
-        <Row gutter={[16, 16]}>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Event" src={image1} />}
-            >
-             
-            </Card>
-          </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Event" src={image2} />}
-            >
-             
-            </Card>
-          </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Event" src={image3} />}
-            >
-              
-            </Card>
-          </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Event" src={image4} />}
-            >
-              
-            </Card>
-          </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Event" src={image5} />}
-            >
-              
-            </Card>
-          </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-            <Card
-              hoverable
-              cover={<img alt="Event" src={image6} />}
-            >
-            </Card>
-          </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-          </Col>
-        </Row>
       </div>
-    </div>
     )
   }
 }
