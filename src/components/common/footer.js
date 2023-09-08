@@ -12,7 +12,7 @@ function AppFooter() {
           <li><a href="#"><i className="fa fa-facebook-f"></i></a></li>
           <li><a href="#"><i className="fa fa-twitter"></i></a></li>
           <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
+          <li><a href="#"><i className="fa fa-youtube"></i></a></li>
           <li><a href="#"><i className="fa fa-instagram"></i></a></li>
         </ul>
         <div className="copyright">Copyright &copy; UAPB GSTEM</div>

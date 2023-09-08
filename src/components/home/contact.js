@@ -65,6 +65,10 @@ const AppContact = () => {
                 required: true,
                 message: 'Please add your name'
               },
+              {
+                pattern: /^[A-Za-z]+$/,
+                message: "Please enter only alphabetic characters"
+              }
             ]}
           >
             <Input />
@@ -101,7 +105,13 @@ const AppContact = () => {
           <Form.Item
             name="subject"
             label="Subject"
-            rules={[{ required: true, message: 'Please add a subject' }]}>
+            rules={[
+              { required: true, message: 'Please add a subject' },
+              {
+                pattern: /^[A-Za-z]+$/,
+                message: "Please enter only alphabetic characters"
+              }
+              ]}>
             <Input />
           </Form.Item>
           <Form.Item name="message"

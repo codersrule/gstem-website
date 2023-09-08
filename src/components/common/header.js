@@ -106,7 +106,7 @@ const AppHeader = () => {
       <div className="container-fluid">
         <div className="header">
           <div className="logo">
-            <a href="/">GSTEM</a>
+            GSTEM
           </div>
           <div className="mobileHidden">
             <Row>
@@ -143,8 +143,13 @@ const AppHeader = () => {
                 label="First Name"
                 rules={[
                   {
+                    
                     required: true,
                     message: "First Name is required"
+                  },
+                  {
+                    pattern: /^[A-Za-z]+$/,
+                    message: "Please enter only alphabetic characters"
                   }
                 ]}
               >
@@ -155,6 +160,13 @@ const AppHeader = () => {
               <Form.Item
                 name="middleName"
                 label="Middle Name"
+                rules={[
+                 
+                  {
+                    pattern: /^[A-Za-z]+$/,
+                    message: "Please enter only alphabetic characters"
+                  }
+                ]}
               >
                 <Input onChange={handleChange} />
               </Form.Item>
@@ -167,6 +179,10 @@ const AppHeader = () => {
                     required: true,
                     message: 'Last Name is Required',
                   },
+                  {
+                    pattern: /^[A-Za-z]+$/,
+                    message: "Please enter only alphabetic characters"
+                  }
                 ]}
               >
                 <Input onChange={handleChange} />
@@ -183,6 +199,7 @@ const AppHeader = () => {
                     required: true,
                     message: 'Please input your E-mail!',
                   },
+                  
                 ]}
               >
                 <Input onChange={handleChange} />
@@ -202,7 +219,13 @@ const AppHeader = () => {
               <Form.Item
                 name="phone"
                 label="Phone Number"
-                rules={[{ message: 'Please input your phone number!' }]}
+                rules={[
+                  { message: 'Please input your phone number!' },
+                  {
+                    pattern: /^[0-9]{10}$/,
+                    message: "Please enter a 10-digit phone number"
+                  }
+                ]}
               >
                 <Input style={{ width: '100%' }} onChange={handleChange} />
               </Form.Item>
